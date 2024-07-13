@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary-950;
+  }
+
+  h1 {
+    @apply text-3xl font-bold tracking-tight text-slate-200 md:text-4xl;
+  }
+
+  h2 {
+    @apply text-xl font-medium tracking-tight text-slate-200 md:text-2xl;
+  }
+
+  h3 {
+    @apply font-medium leading-snug text-slate-200;
+
+    &.title {
+      @apply uppercase tracking-widest;
+    }
+  }
+
+  nav {
+    &.desktop {
+      @apply mb-11 mt-8 hidden lg:block;
+
+      ul {
+        @apply flex flex-col gap-y-5 lg:gap-y-8;
+      }
+
+      a {
+        @apply flex items-center gap-x-4;
+
+        span {
+          &:first-child {
+            @apply mr-4 h-px w-8 bg-slate-600 transition-all;
+          }
+
+          &:last-child {
+            @apply flex items-center gap-x-2 text-xs font-bold uppercase tracking-widest text-slate-500;
+          }
+        }
+
+        &.active {
+          span {
+            &:first-child {
+              @apply w-24 bg-green-400;
+            }
+
+            &:last-child {
+              @apply text-green-400;
+            }
+          }
+        }
+      }
+    }
+
+    &.mobile {
+      @apply fixed left-0 top-0 z-30 w-full rounded-b-md bg-slate-950 lg:hidden;
+
+      .mobile-nav-container {
+        @apply mx-auto max-w-7xl px-4 lg:px-8;
+      }
+
+      .nav-header {
+        @apply flex h-16 items-center justify-between;
+      }
+
+      .logo-container {
+        @apply flex flex-shrink-0 items-center;
+      }
+
+      .logo {
+        @apply h-8 w-auto;
+      }
+
+      .menu-toggle {
+        @apply -mr-2 flex lg:hidden;
+
+        .toggle-button {
+          @apply relative inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-slate-900 hover:text-slate-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-800;
+
+          .toggle-button-bg {
+            @apply absolute -inset-0.5;
+          }
+        }
+      }
+
+      .menu-panel {
+        @apply flex flex-col gap-y-4 lg:hidden;
+
+        .menu-item-container {
+          @apply space-y-1 px-2 pb-3 pt-2;
+
+          .menu-item {
+            @apply flex items-center gap-x-4 px-3 py-2 text-sm font-medium uppercase tracking-widest text-slate-500;
+
+            &.active {
+              @apply text-green-400;
+            }
+
+            &:hover {
+              @apply rounded-md hover:bg-slate-900 hover:text-slate-400;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    @apply leading-normal text-slate-400;
+  }
+
+  a {
+    @apply cursor-pointer text-base font-medium leading-tight text-green-300 hover:text-green-400;
+  }
+
+  section {
+    @apply flex flex-col gap-y-8;
+  }
+
+  footer {
+    @apply flex flex-col gap-y-3;
+
+    a,
+    .highlight {
+      @apply font-medium;
+
+      &.highlight {
+        @apply text-slate-200;
+      }
+    }
+  }
+}
+
+@layer components {
+  .panel {
+    @apply flex flex-col gap-x-10 lg:h-full lg:flex-row;
+
+    .left-panel,
+    .right-panel {
+      @apply flex-grow lg:flex-shrink-0 lg:flex-grow-0;
+    }
+
+    .left-panel {
+      @apply lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-2/5 lg:flex-col lg:justify-between lg:py-24;
+    }
+
+    .right-panel {
+      @apply pt-24 lg:flex-1 lg:py-24;
+    }
+  }
+
+  .badge-container {
+    @apply flex flex-wrap gap-2;
+
+    .badge {
+      @apply flex max-h-7 items-center rounded-full bg-green-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-300;
+      &.badge-active {
+        @apply text-white;
+      }
+    }
+  }
+
+  .card {
+    @apply relative transition-all;
+
+    .card-hover {
+      @apply absolute -inset-4 z-0 hidden rounded-md transition lg:-inset-6 lg:block;
+    }
+  }
+
+  .skeleton {
+    @apply flex animate-pulse flex-col gap-y-4;
+
+    & div {
+      @apply rounded-lg bg-slate-400;
+    }
+  }
+}
+
+@layer utilities {
+  #me {
+    section {
+      h2 {
+        @apply sticky top-24 lg:top-24;
+      }
+    }
+  }
+
+  .container {
+    @apply mx-auto min-h-screen max-w-screen-xl px-6 pb-12 pt-24 md:px-12 md:py-20 lg:px-24 lg:py-0;
+  }
+
+  .external-link {
+    @apply relative;
+
+    svg {
+      @apply absolute top-0 h-2 w-2;
+    }
+
+    p {
+      @apply ml-2.5;
+    }
+  }
+
+  span {
+    &.datetime {
+      @apply text-xs font-semibold uppercase tracking-wide text-slate-500;
+    }
+  }
+
+  footer {
+    #reference {
+      @apply lg:flex;
+    }
+  }
+
+  .fade-content {
+    @apply fixed z-20 h-24 from-primary-950 to-transparent;
+
+    &.fade-top-content {
+      @apply inset-x-0 left-0 top-0 bg-gradient-to-b;
+    }
+
+    &.fade-bottom-content {
+      @apply inset-x-0 bottom-0 left-0 bg-gradient-to-t;
+    }
+  }
+
+  .text-active {
+    @apply animate-[gradientAnimate_3s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.100),theme(colors.pink.300),theme(colors.orange.400),theme(colors.pink.300),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] bg-clip-text text-sm font-medium text-transparent;
+
+    @keyframes gradientAnimate {
+      0% {
+        background-position: 0% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+  }
+
+  .badge-active {
+    @apply animate-[gradientAnimation_3s_ease_infinite] bg-[linear-gradient(45deg,#68217a,#8a2be2,#68217a,#8a2be2)] bg-[length:300%_300%];
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% center;
+      }
+      50% {
+        background-position: 50% center;
+      }
+      100% {
+        background-position: 100% center;
+      }
+    }
+  }
+}
