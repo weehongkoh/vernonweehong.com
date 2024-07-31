@@ -9,14 +9,21 @@ import { load, trackPageview } from "fathom-client";
 export default function FathomAnalytics() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const siteId = process.env.NEXT_PUBLIC_FATHOM_SITE_ID!;
 
   useEffect(() => {
-    load(`${process.env.NEXT_PUBLIC_FATHOM_SITE_ID}`, {
-      includedDomains: [process.env.NEXT_PUBLIC_URL!],
-      spa: "auto",
+    load(siteId, {
+      auto: false,
     });
+  }, [siteId]);
 
-    trackPageview();
+  useEffect(() => {
+    if (!pathname) return;
+
+    trackPageview({
+      url: pathname + searchParams.toString(),
+      referrer: document.referrer,
+    });
   }, [pathname, searchParams]);
 
   return null;

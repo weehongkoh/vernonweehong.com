@@ -4,7 +4,6 @@ import { ReactNode, Suspense } from "react";
 
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
@@ -14,15 +13,6 @@ import FathomAnalytics from "@/components/Analytics/FathomAnalytics";
 import { resume } from "@/data/resume";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: resume.data.name,
-  description: resume.data.summary,
-  image: "https://weehong-me.b-cdn.net/Personal/profile.jpg",
-  url: process.env.NEXT_PUBLIC_URL!,
-};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -34,7 +24,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: `${resume.data.name} - ${resume.data.role}`,
-  description: resume.data.summary,
+  description:
+    "Vernon Wee Hong KOH is a Software Engineer and a lifelong learner with expertise in crafting engaging user interfaces (UIs) and robust application programming interfaces (APIs). He shares knowledge and contributes to the growth of the community.",
   robots:
     process.env.NODE_ENV === "production"
       ? "index, follow"
@@ -82,12 +73,6 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <Suspense fallback={null}>
-          <Script
-            id="person-jsonld"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            key="person-jsonld"
-          />
           <FathomAnalytics />
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS!} />
           <Analytics />

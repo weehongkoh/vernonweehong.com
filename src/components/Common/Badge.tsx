@@ -1,4 +1,4 @@
-import { clsx } from "@/helpers";
+import { clsx, isEmptyOrWhitespace } from "@/helpers";
 
 export default function Badge({
   classes,
@@ -10,7 +10,12 @@ export default function Badge({
   activeItems?: string[];
 }) {
   return (
-    <div className={clsx(classes ? classes : "", "badge-container")}>
+    <div
+      className={clsx(
+        !isEmptyOrWhitespace(classes) ? (classes ?? "") : "",
+        "badge-container",
+      )}
+    >
       {items.map((item, index) => (
         <div
           key={`${item}-${index}`}

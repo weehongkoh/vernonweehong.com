@@ -23,8 +23,11 @@ const config: Config = {
           "950": "#051923",
         },
       },
+      fontFamily: {
+        jetbrains: ["JetBrains Mono", "monospace"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
 export default config;

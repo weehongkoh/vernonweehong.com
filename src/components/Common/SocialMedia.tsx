@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { resume } from "@/data/resume";
-import { clsx } from "@/helpers";
+import { clsx, isEmptyOrWhitespace } from "@/helpers";
 import { SocialMediaProp, socialMediaIconType } from "@/types/Resume";
 
 const socialMediaIcons: socialMediaIconType = {
@@ -20,12 +20,17 @@ export default function SocialMedia({ classes }: { classes?: string }) {
     data: { social_media },
   } = resume;
   return (
-    <div className={clsx(classes ? classes : "", "flex gap-x-5")}>
+    <div
+      className={clsx(
+        !isEmptyOrWhitespace(classes) ? (classes ?? "") : "",
+        "flex gap-x-5",
+      )}
+    >
       {social_media.map((social: SocialMediaProp) => (
-        <a key={social.field} href={social.url} target="_blank">
+        <a key={social.name} href={social.url} target="_blank">
           <FontAwesomeIcon
             className="h-6 w-6 text-white"
-            icon={socialMediaIcons[social.field]}
+            icon={socialMediaIcons[social.name]}
           />
         </a>
       ))}

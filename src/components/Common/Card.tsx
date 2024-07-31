@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { clsx } from "@/helpers";
+import { clsx, isEmptyOrWhitespace } from "@/helpers";
 
 export default function Card({
   classes,
@@ -12,7 +12,7 @@ export default function Card({
   return (
     <div
       className={clsx(
-        classes ? classes : "",
+        !isEmptyOrWhitespace(classes) ? (classes ?? "") : "",
         "group lg:hover:!opacity-100 lg:group-hover/list:opacity-50",
       )}
     >

@@ -17,8 +17,8 @@ const nextConfig = {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "www.vernonweehong.com" }],
-        destination: `${process.env.NEXT_PUBLIC_URL}/:path*`,
+        has: [{ type: "header", key: "host", value: "www.vernonweehong.com" }],
+        destination: "https://vernonweehong.com/:path*",
         permanent: true,
       },
     ];
@@ -36,11 +36,11 @@ const nextConfig = {
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.usefathom.com va.vercel-scripts.com https://www.googletagmanager.com;
-  style-src 'self' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline' fonts.googleapis.com;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
-  font-src 'self';
+  font-src 'self' data: fonts.gstatic.com;
   frame-src 'self';
   object-src 'self';
 `;

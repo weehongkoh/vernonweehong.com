@@ -1,14 +1,17 @@
+import Link from "next/link";
+
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons/faArrowUpRightFromSquare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Badge from "@/components/Common/Badge";
 import Card from "@/components/Common/Card";
+import SocialMedia from "@/components/Common/SocialMedia";
 import { resume } from "@/data/resume";
 import { splitNewLine, stripHtmlTags } from "@/helpers";
 
 export default async function Content() {
   const {
-    data: { about, experiences, projects, awards, skills },
+    data: { about, experiences, projects, awards, skills, educations },
   } = resume;
 
   return (
@@ -19,16 +22,17 @@ export default async function Content() {
         {splitNewLine(stripHtmlTags(about)).map((p, index) => (
           <p key={index}>{p}</p>
         ))}
+        <SocialMedia classes="lg:hidden" />
       </section>
       <section id="experience">
         <h2>Experiences</h2>
         <div className="group/list flex flex-col gap-12">
           {experiences.map((experience, index) => (
             <Card
-              classes="card grid gap-2 md:grid-cols-[minmax(150px,150px)_1fr] md:gap-4 "
+              classes="card grid gap-2 md:grid-cols-[minmax(150px,150px)_1fr] md:gap-4"
               key={index}
             >
-              <div>
+              <div className="z-10">
                 <span className="datetime">
                   {new Date(experience.from).getFullYear()} &#8212;{" "}
                   {experience.to
@@ -44,7 +48,7 @@ export default async function Content() {
                 </h3>
                 <div>
                   {experience.descriptions.blocks.map((block, j) => (
-                    <p key={j} className="text-sm">
+                    <p key={j} className="my-3 text-sm">
                       {block.data.text}
                     </p>
                   ))}
@@ -54,6 +58,18 @@ export default async function Content() {
             </Card>
           ))}
         </div>
+        <Link
+          href="https://resume.vernonweehong.com/"
+          passHref
+          target="blank"
+          className="relative mt-3 text-sm"
+        >
+          <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className="absolute top-0 h-2 w-2"
+          />
+          <span className="ml-3 text-slate-200">View Full Résumé</span>
+        </Link>
       </section>
       <section id="project">
         <h2>Projects</h2>
@@ -73,24 +89,6 @@ export default async function Content() {
           ))}
         </div>
       </section>
-      <section id="award">
-        <h2>Awards</h2>
-        <div className="grid grid-cols-1 gap-12">
-          {awards.map((award) => (
-            <div key={award.name}>
-              <div className="flex flex-col gap-y-3">
-                <span className="datetime">
-                  {new Date(award.at).getFullYear()}
-                </span>
-                <a href={award.url} target="_blank" className="external-link">
-                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                  <h3 className="ml-2.5">{award.name}</h3>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
       <section id="skills">
         <h2>Skills</h2>
         <div className="grid grid-cols-1 gap-y-12">
@@ -102,8 +100,54 @@ export default async function Content() {
               <div>
                 <h3>{skill.name}</h3>
               </div>
-              <Badge items={skill.skill} activeItems={skill.activeLanguage} />
+              <Badge items={skill.skill} activeItems={skill.active_skill} />
             </div>
+          ))}
+        </div>
+      </section>
+      <section id="award">
+        <h2>Awards</h2>
+        <div className="grid grid-cols-1 gap-12">
+          {awards.map((award) => (
+            <div key={award.name}>
+              <div className="flex flex-col gap-y-3">
+                <span className="datetime">
+                  {new Date(award.at).getFullYear()}
+                </span>
+                <a href={award.url} target="_blank" className="external-link">
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  <h3 className="ml-2.5 text-sm">{award.name}</h3>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section id="education">
+        <h2>Educations</h2>
+        <div className="group/list flex flex-col gap-12">
+          {educations.map((education, index) => (
+            <Card
+              classes="card grid gap-2 md:grid-cols-[minmax(150px,150px)_1fr] md:gap-4"
+              key={index}
+            >
+              <div className="z-10">
+                <span className="datetime">
+                  {new Date(education.from).getFullYear()} &#8212;{" "}
+                  {education.to
+                    ? new Date(education.to).getFullYear()
+                    : "CURRENT"}
+                </span>
+              </div>
+              <div className="z-10 flex flex-col gap-y-2">
+                <h3>
+                  {education.name}
+                  <span className="px-2">&#8226;</span>
+                  {education.country}
+                </h3>
+                <p>{education.degree}</p>
+              </div>
+            </Card>
           ))}
         </div>
       </section>

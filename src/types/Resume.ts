@@ -5,7 +5,7 @@ export type ResumeDataProp = {
 };
 
 export type ResumeProp = {
-  id: number;
+  id: string;
   name: string;
   role: string;
   summary: string;
@@ -47,19 +47,19 @@ export type ProjectProp = {
 export type SkillProp = {
   name: string;
   skill: string[];
-  activeLanguage?: string[];
+  active_skill?: string[];
 };
 
 export type EducationProp = {
   from: string;
   to: string;
   country: string;
-  school_name: string;
-  certificate: string;
+  name: string;
+  degree: string;
 };
 
 export type SocialMediaProp = {
-  field: string;
+  name: string;
   url: string;
 };
 

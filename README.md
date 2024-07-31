@@ -9,7 +9,7 @@ I'm a lifelong learner with a passion for creating engaging user interfaces (UIs
 ### Explore More
 
 - Learn more about me and my work on my personal website: [here](https://vernonweehong.com).
-- Dive into my technical explorations and project experiences on my blog: [here](https://weehong.me/post).
+- Dive into my technical explorations and project experiences on my blog: [here](https://vernonweehong.com/blog).
 
 ### Inspiration
 
@@ -37,7 +37,7 @@ Here are the steps to get started contributing:
 1. Clone the Repository:
 
 ```bash
-git clone git@github.com:weehongkoh/weehong.me.git website
+git clone git@github.com:weehongkoh/vernonweehong.com.git
 ```
 
 2. Install Dependencies: Navigate to the cloned directory and install the project's dependencies:

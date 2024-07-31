@@ -123,6 +123,30 @@
     @apply flex flex-col gap-y-8;
   }
 
+  form {
+    label {
+      @apply mb-2 block text-sm font-medium text-slate-200;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6;
+    }
+
+    textarea {
+      @apply resize-none;
+    }
+
+    button {
+      @apply inline-flex items-center justify-center rounded-md bg-green-400 px-4 py-2 text-sm font-medium text-slate-900 shadow-sm hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+    }
+
+    .text-error {
+      @apply mt-2 text-xs text-red-500;
+    }
+  }
+
   footer {
     @apply flex flex-col gap-y-3;
 
@@ -147,7 +171,7 @@
     }
 
     .left-panel {
-      @apply lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-2/5 lg:flex-col lg:justify-between lg:py-24;
+      @apply gap-y-3 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-h-screen lg:w-2/5 lg:flex-col lg:justify-between lg:py-24;
     }
 
     .right-panel {

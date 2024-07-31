@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+.prose {
+  h1 {
+    @apply hidden;
+  }
+
+  h2 {
+    @apply text-xl font-medium tracking-tight text-slate-200 md:text-2xl;
+  }
+
+  h3 {
+    @apply text-lg font-medium leading-snug text-slate-200;
+  }
+
+  code {
+    @apply rounded-sm p-1 font-jetbrains text-sm text-slate-200;
+  }
+
+  p {
+    @apply mt-0 leading-normal text-slate-400;
+
+    code,
+    strong {
+      @apply text-green-300;
+    }
+  }
+
+  table {
+    td {
+      @apply text-slate-200;
+    }
+  }
+
+  ul li,
+  ol li {
+    @apply leading-normal text-slate-400;
+    code,
+    strong {
+      @apply break-words text-green-300;
+    }
+  }
+
+  pre {
+    @apply relative mt-0 bg-slate-800 p-0;
+
+    code {
+      @apply p-0 font-jetbrains #{!important};
+    }
+
+    div.code-block {
+      @apply m-0 #{!important};
+    }
+  }
+
+  a {
+    @apply text-green-300 hover:text-green-400;
+  }
+
+  [data-remark-code-title] {
+    background-color: #011627;
+    @apply py-3 pl-3 font-jetbrains text-xs text-slate-400;
+  }
+}
