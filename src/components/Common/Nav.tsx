@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import {
-  faArrowUpRightFromSquare,
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
@@ -24,23 +23,7 @@ const links = [
   {
     title: "Home",
     href: "/",
-  },
-  {
-    title: "Blog",
-    href: "https://blog.vernonweehong.com",
-    target: "_blank",
-    withIcons: (
-      <FontAwesomeIcon className="h-4 w-4" icon={faArrowUpRightFromSquare} />
-    ),
-  },
-  {
-    title: "Download Résumé",
-    href: "https://resume.vernonweehong.com",
-    target: "_blank",
-    withIcons: (
-      <FontAwesomeIcon className="h-4 w-4" icon={faArrowUpRightFromSquare} />
-    ),
-  },
+  }
 ];
 
 export default function Nav({
@@ -58,7 +41,7 @@ export default function Nav({
         <Disclosure as="nav" className="desktop">
           <ul>
             {links.map((link, index) => {
-              const { withIcons, ...rest } = link;
+              const { ...rest } = link;
               return (
                 <li key={index}>
                   <Link
@@ -71,7 +54,6 @@ export default function Nav({
                     <span className="group-hover:w-24 group-hover:bg-slate-200"></span>
                     <span className="group-hover:text-slate-200">
                       {link.title}
-                      {withIcons && withIcons}
                     </span>
                   </Link>
                 </li>
@@ -107,7 +89,7 @@ export default function Nav({
           <DisclosurePanel className="menu-panel">
             <div className="menu-item-container">
               {links.map((link, index) => {
-                const { withIcons, ...rest } = link;
+                const { ...rest } = link;
                 return (
                   <DisclosureButton
                     as="a"
@@ -119,7 +101,6 @@ export default function Nav({
                     )}
                   >
                     {link.title}
-                    {withIcons && withIcons}
                   </DisclosureButton>
                 );
               })}

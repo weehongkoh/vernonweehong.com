@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons/faArrowUpRightFromSquare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -58,18 +56,6 @@ export default async function Content() {
             </Card>
           ))}
         </div>
-        <Link
-          href="https://resume.vernonweehong.com/"
-          passHref
-          target="blank"
-          className="relative mt-3 text-sm"
-        >
-          <FontAwesomeIcon
-            icon={faArrowUpRightFromSquare}
-            className="absolute top-0 h-2 w-2"
-          />
-          <span className="ml-3 text-slate-200">View Full Résumé</span>
-        </Link>
       </section>
       <section id="project">
         <h2>Projects</h2>
