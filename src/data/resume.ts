@@ -137,6 +137,10 @@ export const resume = {
         url: "https://github.com/weehongkoh",
       },
       {
+        name: "github",
+        url: "https://github.com/weehong",
+      },
+      {
         name: "youtube",
         url: "https://www.youtube.com/@weehongayden90",
       },
