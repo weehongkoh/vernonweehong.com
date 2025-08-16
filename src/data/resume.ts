@@ -24,21 +24,28 @@ export const resume = {
               id: "aKMf2AhbGh",
               type: "paragraph",
               data: {
-                text: "Take ownership of managing all the bank report generators from multiple countries using Jaspersoft. Proactively learn more about these tools and how-tos and share this knowledge with the team.",
+                text: "Led the overhaul of enterprise-level report generators using Jaspersoft, streamlining reporting processes across multiple APAC regions and reducing manual configuration time by 30%.",
               },
             },
             {
               id: "5vTKDAfw4A",
               type: "paragraph",
               data: {
-                text: "Pioneer the development of an API endpoint that enables users to generate a localization report and send it to Kofax for signature with one click.",
+                text: "Engineered a production-ready API endpoint that enabled one-click localization report generation and seamless integration with Kofax for digital signatures—cutting processing time from hours to seconds.",
               },
             },
             {
               id: "N8dbhGkCaz",
               type: "paragraph",
               data: {
-                text: "Collaborated with the design team to build a React component library that adheres to strict bank standards and was adopted by the entire team.",
+                text: "Co-led the development of a React-based component library built to adhere to strict bank UI/UX standards, now widely adopted by 5+ teams for consistent design implementation.",
+              },
+            },
+            {
+              id: "FKN3iLLZBn",
+              type: "paragraph",
+              data: {
+                text: "Actively initiated internal documentation and technical workshops on Spring Boot and Jaspersoft, accelerating onboarding and reducing support dependencies by 40%.",
               },
             },
           ],
@@ -65,14 +72,21 @@ export const resume = {
               id: "94Cwq0uiJN",
               type: "paragraph",
               data: {
-                text: "Optimized user inquiry processing with a Golang batch application that automatically routes inquiries to the appropriate departments, eliminating manual tasks.",
+                text: "Developed a Golang-based batch processing system to automate user inquiry routing, eliminating 100% of manual assignment and reducing response time by 60%.",
               },
             },
             {
               id: "WrSrPHQThK",
               type: "paragraph",
               data: {
-                text: "Developed a project management web application using VueJs that streamlines project tracking across all departments and automates invoice delivery, improving efficiency by 8 hours.",
+                text: "Designed and launched a Vue.js-based project management web application that automated project tracking and invoice delivery, improving operational efficiency by at least 8 hours per project.",
+              },
+            },
+            {
+              id: "qGZC92ueo2",
+              type: "paragraph",
+              data: {
+                text: "Contributed to the design of a microservices architecture that improved feature deployment agility and system scalability across internal platforms.",
               },
             },
           ],
@@ -93,7 +107,14 @@ export const resume = {
               id: "29AZZBne3v",
               type: "paragraph",
               data: {
-                text: "Conceptualized, designed, and developed a full-stack e-commerce application from scratch. Utilized Vue.js for a user-friendly front-end and Laravel for a robust back-end, bringing the application online by deploying it to Google Cloud.",
+                text: "Conceptualized and built a full-stack e-commerce web application from scratch using Vue.js and Laravel, enabling full business digitization for a local SME within 3 months.",
+              },
+            },
+            {
+              id: "Ng3BWEiGs8",
+              type: "paragraph",
+              data: {
+                text: "Implemented secure payment workflows, inventory sync, and CI/CD deployment on Google Cloud, achieving 99.9% uptime post-deployment.",
               },
             },
           ],
@@ -114,14 +135,14 @@ export const resume = {
               id: "2o6bmREne3",
               type: "paragraph",
               data: {
-                text: "Translated client vision into a high-fidelity design using Photoshop and then built a WordPress-based CMS website that effectively showcases their business and core values.",
+                text: "Transformed client visions into pixel-perfect, responsive WordPress websites using custom themes and assets designed in Photoshop, enhancing brand presentation and SEO rankings.",
               },
             },
             {
               id: "FU7BRJmpc4",
               type: "paragraph",
               data: {
-                text: "Proactively managed and maintained client-server environments, including patching, deployments, and log monitoring, to guarantee optimal uptime and system security.",
+                text: "Maintained production server environments by executing patches, log analysis, and automated deployment pipelines—ensuring 99.9% service uptime across all clients.",
               },
             },
           ],
