@@ -21,24 +21,31 @@ export const resume = {
           time: 1722389624061,
           blocks: [
             {
-              id: "aKMf2AhbGh",
+              id: "1",
               type: "paragraph",
               data: {
-                text: "Take ownership of managing all the bank report generators from multiple countries using Jaspersoft. Proactively learn more about these tools and how-tos and share this knowledge with the team.",
+                text: "Volunteered to serve as the technical translator between the Taiwan business team and an external insurance vendor to deliver a cross-border integration project. Designed and implemented an API enabling direct insurance purchases, configured secure network connectivity via Cloudflare to unblock DBS-to-vendor traffic, and translated complex requirements into actionable tasks for the engineering team.",
               },
             },
             {
-              id: "5vTKDAfw4A",
+              id: "2",
               type: "paragraph",
               data: {
-                text: "Pioneer the development of an API endpoint that enables users to generate a localization report and send it to Kofax for signature with one click.",
+                text: "Led the complete overhaul of enterprise-level report generators using Jaspersoft, architecting a scalable framework that automated configurations and reduced manual setup time by 30% across APAC regions.",
               },
             },
             {
-              id: "N8dbhGkCaz",
+              id: "3",
               type: "paragraph",
               data: {
-                text: "Collaborated with the design team to build a React component library that adheres to strict bank standards and was adopted by the entire team.",
+                text: "Engineered a production-ready Spring Boot API endpoint that enabled one-click localized report generation and seamless integration with Kofax digital signatures, cutting processing time from hours to seconds.",
+              },
+            },
+            {
+              id: "4",
+              type: "paragraph",
+              data: {
+                text: "Co-led the development of a React-based internal component library built to meet strict DBS UI/UX standards, later adopted by over five teams to ensure consistent design implementation.",
               },
             },
           ],
@@ -50,6 +57,7 @@ export const resume = {
           "Spring Boot",
           "React",
           "Jaspersoft Studio",
+          "Cloudflare",
         ],
         country: "Singapore",
       },
@@ -62,17 +70,24 @@ export const resume = {
           time: 1721111541272,
           blocks: [
             {
-              id: "94Cwq0uiJN",
+              id: "1",
               type: "paragraph",
               data: {
-                text: "Optimized user inquiry processing with a Golang batch application that automatically routes inquiries to the appropriate departments, eliminating manual tasks.",
+                text: "Designed and implemented a Golang-based batch processing system to automate user inquiry routing, eliminating manual assignment and reducing response time by 60%.",
               },
             },
             {
-              id: "WrSrPHQThK",
+              id: "2",
               type: "paragraph",
               data: {
-                text: "Developed a project management web application using VueJs that streamlines project tracking across all departments and automates invoice delivery, improving efficiency by 8 hours.",
+                text: "Developed a Vue.js project management web application that automated project tracking and invoice generation, improving operational efficiency by at least 8 hours per project.",
+              },
+            },
+            {
+              id: "3",
+              type: "paragraph",
+              data: {
+                text: "Contributed to the design of a microservices architecture that enhanced feature deployment speed and system scalability across multiple internal platforms.",
               },
             },
           ],
@@ -90,10 +105,17 @@ export const resume = {
           time: 1721111634676,
           blocks: [
             {
-              id: "29AZZBne3v",
+              id: "1",
               type: "paragraph",
               data: {
-                text: "Conceptualized, designed, and developed a full-stack e-commerce application from scratch. Utilized Vue.js for a user-friendly front-end and Laravel for a robust back-end, bringing the application online by deploying it to Google Cloud.",
+                text: "Proposed and led the end-to-end development of a full-stack e-commerce platform using Vue.js and Laravel, enabling complete business digitization for a local SME within three months.",
+              },
+            },
+            {
+              id: "2",
+              type: "paragraph",
+              data: {
+                text: "Implemented secure payment workflows, real-time inventory synchronization, and CI/CD deployment pipelines on Google Cloud, achieving 99.9% uptime post-launch.",
               },
             },
           ],
@@ -111,17 +133,17 @@ export const resume = {
           time: 1721111696663,
           blocks: [
             {
-              id: "2o6bmREne3",
+              id: "1",
               type: "paragraph",
               data: {
-                text: "Translated client vision into a high-fidelity design using Photoshop and then built a WordPress-based CMS website that effectively showcases their business and core values.",
+                text: "Developed and launched responsive, pixel-perfect WordPress websites using custom themes and Photoshop assets, enhancing client brand visibility and SEO rankings.",
               },
             },
             {
-              id: "FU7BRJmpc4",
+              id: "2",
               type: "paragraph",
               data: {
-                text: "Proactively managed and maintained client-server environments, including patching, deployments, and log monitoring, to guarantee optimal uptime and system security.",
+                text: "Maintained production server environments through automated deployment pipelines, log monitoring, and patch management, ensuring 99.9% uptime for client websites.",
               },
             },
           ],
