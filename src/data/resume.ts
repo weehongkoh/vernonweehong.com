@@ -18,34 +18,27 @@ export const resume = {
         company: "DBS Bank",
         role: "Backend Developer",
         descriptions: {
-          time: 1722389624061,
+          time: 1734960000000,
           blocks: [
             {
               id: "1",
               type: "paragraph",
               data: {
-                text: "Volunteered to serve as the technical translator between the Taiwan business team and an external insurance vendor to deliver a cross-border integration project. Designed and implemented an API enabling direct insurance purchases, configured secure network connectivity via Cloudflare to unblock DBS-to-vendor traffic, and translated complex requirements into actionable tasks for the engineering team.",
+                text: "Volunteered to bridge the Singapore, India, and Taiwan teams by translating technical requirements for a multi-region project. Developed an API that enabled multiple DBS branches across regions to securely share and access data based on their specific regional requirements. This ensured seamless integration between branches and helped tailor the solution to the unique needs of each market.",
               },
             },
             {
               id: "2",
               type: "paragraph",
               data: {
-                text: "Led the complete overhaul of enterprise-level report generators using Jaspersoft, architecting a scalable framework that automated configurations and reduced manual setup time by 30% across APAC regions.",
+                text: "Modernized enterprise-level report generation systems across APAC, cutting manual configuration time by 30%, and developed a production-ready API for one-click localized report generation and Kofax digital signatures, reducing processing time from hours to seconds.",
               },
             },
             {
               id: "3",
               type: "paragraph",
               data: {
-                text: "Engineered a production-ready Spring Boot API endpoint that enabled one-click localized report generation and seamless integration with Kofax digital signatures, cutting processing time from hours to seconds.",
-              },
-            },
-            {
-              id: "4",
-              type: "paragraph",
-              data: {
-                text: "Co-led the development of a React-based internal component library built to meet strict DBS UI/UX standards, later adopted by over five teams to ensure consistent design implementation.",
+                text: "Co-led the creation of a React-based component library adhering to strict bank UI/UX standards, now adopted by 5+ teams.",
               },
             },
           ],
@@ -67,27 +60,27 @@ export const resume = {
         to: "2020-04-01",
         role: "Full-stack Developer",
         descriptions: {
-          time: 1721111541272,
+          time: 1734960000000,
           blocks: [
             {
               id: "1",
               type: "paragraph",
               data: {
-                text: "Designed and implemented a Golang-based batch processing system to automate user inquiry routing, eliminating manual assignment and reducing response time by 60%.",
+                text: "Automated user inquiry routing with a Golang-based batch processing system, eliminating 100% of manual assignment and reducing response time by 60%.",
               },
             },
             {
               id: "2",
               type: "paragraph",
               data: {
-                text: "Developed a Vue.js project management web application that automated project tracking and invoice generation, improving operational efficiency by at least 8 hours per project.",
+                text: "Designed and launched a Vue.js-based project management platform to streamline project tracking and invoice delivery, significantly boosting operational efficiency through process automation.",
               },
             },
             {
               id: "3",
               type: "paragraph",
               data: {
-                text: "Contributed to the design of a microservices architecture that enhanced feature deployment speed and system scalability across multiple internal platforms.",
+                text: "Partnered with business stakeholders to translate workflow pain points into scalable digital solutions.",
               },
             },
           ],
@@ -102,20 +95,27 @@ export const resume = {
         to: "2018-04-01",
         role: "Full-stack Developer",
         descriptions: {
-          time: 1721111634676,
+          time: 1734960000000,
           blocks: [
             {
               id: "1",
               type: "paragraph",
               data: {
-                text: "Proposed and led the end-to-end development of a full-stack e-commerce platform using Vue.js and Laravel, enabling complete business digitization for a local SME within three months.",
+                text: "Built a full-stack e-commerce web application from scratch using Vue.js and Laravel to digitize business operations for a local SME, implementing secure payment workflows with Stripe and deploying scalable solutions on Google Cloud to ensure high availability and operational efficiency.",
               },
             },
             {
               id: "2",
               type: "paragraph",
               data: {
-                text: "Implemented secure payment workflows, real-time inventory synchronization, and CI/CD deployment pipelines on Google Cloud, achieving 99.9% uptime post-launch.",
+                text: "Deployed the platform within 3 months, achieving 99.9% uptime and enabling full business digitization.",
+              },
+            },
+            {
+              id: "3",
+              type: "paragraph",
+              data: {
+                text: "Collaborated closely with business owners to align technical features with commercial goals.",
               },
             },
           ],
@@ -130,20 +130,27 @@ export const resume = {
         to: "2017-07-01",
         role: "Web Developer",
         descriptions: {
-          time: 1721111696663,
+          time: 1734960000000,
           blocks: [
             {
               id: "1",
               type: "paragraph",
               data: {
-                text: "Developed and launched responsive, pixel-perfect WordPress websites using custom themes and Photoshop assets, enhancing client brand visibility and SEO rankings.",
+                text: "Delivered pixel-perfect, responsive WordPress websites tailored to client branding and SEO objectives.",
               },
             },
             {
               id: "2",
               type: "paragraph",
               data: {
-                text: "Maintained production server environments through automated deployment pipelines, log monitoring, and patch management, ensuring 99.9% uptime for client websites.",
+                text: "Developed custom themes and designed graphical assets in Photoshop to enhance user engagement and brand visibility.",
+              },
+            },
+            {
+              id: "3",
+              type: "paragraph",
+              data: {
+                text: "Partnered with clients to transform design concepts into performant, SEO-optimized digital experiences.",
               },
             },
           ],
@@ -173,28 +180,21 @@ export const resume = {
     ],
     projects: [
       {
-        name: "InchFab Web Application",
+        name: "Full-Text Search for PDFs with AWS",
         tags: [
-          "Grafana",
-          "Prometheus",
-          "Jenkins",
-          "GitHub Workflow",
-          "Docker",
-          "MongoDB",
-          "Auth0",
-          "PostgreSQL",
-          "ReactJs",
-          "Spring Security",
-          "Spring Boot 3",
+          "Amazon Textract",
+          "SQS",
+          "SNS",
+          "OpenSearch",
+          "S3",
+          "Cognito",
+          "CloudWatch",
+          "C# .NET",
+          "CQRS",
+          "Onion Architecture",
         ],
         description:
-          "<p>Developed a SaaS platform using Spring Boot 3 (backend) and Next.js (frontend) that replaces complex Excel forms with a user-friendly interface for streamlined project pricing calculations, enabling real-time adjustments based on market fluctuations and swift updates, ultimately boosting efficiency and decision-making.</p>",
-      },
-      {
-        name: "Subscription Management Application",
-        tags: ["Spring Boot 3", "Vite", "PostgreSQL", "Auth0"],
-        description:
-          '<p class="z-10 text-sm">Developed a subscription management SaaS platform using Docker containers for easy deployment, Spring Boot for the robust backend, and Next.js 14 for the user-friendly frontend, empowering users to manage subscriptions effectively with features like currency conversion (based on user preference) and total monthly cost calculation, ultimately fostering financial clarity and informed decision-making.</p>',
+          "<p>Developed a scalable full-text search system for PDFs using AWS services and C# .NET Web API, incorporating CQRS and Onion Architecture. Utilized Amazon Textract for automated text extraction from PDFs, SQS and SNS for job queuing and notifications, and OpenSearch for advanced full-text search features like fuzzy matching and faceted filtering. Managed secure user authentication and tier-based access control with Cognito, and stored files in S3 with presigned URLs. Implemented real-time notifications, retry logic, and comprehensive monitoring using CloudWatch, ensuring system scalability, reliability, and observability.</p>",
       },
     ],
     educations: [
